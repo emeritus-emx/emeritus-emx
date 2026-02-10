@@ -1,0 +1,97 @@
+# --- Admin Dashboard ---
+@app.get('/admin/dashboard/stats')
+def admin_dashboard_stats(db: Session = Depends(get_db), admin: models.User = Depends(require_admin)):
+    """System overview stats for admin"""
+    total_users = db.query(models.User).count()
+    verified_users = db.query(models.User).filter(models.User.is_verified == True).count()
+    total_scholarships = db.query(models.Scholarship).count()
+    active_users = db.query(models.User).filter(models.User.last_login.isnot(None)).count()
+    
+    return {
+        'total_users': total_users,
+        'verified_users': verified_users,
+        'unverified_users': total_users - verified_users,
+        'active_users': active_users,
+        'total_scholarships': total_scholarships,
+        'system_health': 'ok'
+    }
+
+@app.get('/admin/users/search')
+def admin_search_users(q: str, db: Session = Depends(get_db), admin: models.User = Depends(require_admin)):
+    """Search users by email or name"""
+    users = db.query(models.User).filter(
+        (models.User.email.ilike(f'%{q}%')) | (models.User.name.ilike(f'%{q}%'))
+    ).all()
+    return users
+
+@app.put('/admin/users/{user_id}/role')
+def admin_update_user_role(user_id: int, payload: dict, db: Session = Depends(get_db), admin: models.User = Depends(require_admin)):
+    """Update user role (student/sponsor/admin)"""
+    user = db.query(models.User).get(user_id)
+    if not user:
+        raise HTTPException(status_code=404, detail='User not found')
+    new_role = payload.get('role')
+    if new_role not in ('student', 'sponsor', 'admin'):
+        raise HTTPException(status_code=400, detail='Invalid role')
+    user.role = new_role
+    db.commit()
+    return {'message': f'User role updated to {new_role}'}
+
+@app.put('/admin/users/{user_id}/toggle-active')
+def admin_toggle_user_active(user_id: int, db: Session = Depends(get_db), admin: models.User = Depends(require_admin)):
+    """Enable/disable user account"""
+    user = db.query(models.User).get(user_id)
+    if not user:
+        raise HTTPException(status_code=404, detail='User not found')
+    user.is_active = not user.is_active
+    db.commit()
+    return {'user_id': user.id, 'is_active': user.is_active}
+
+@app.delete('/admin/users/{user_id}')
+def admin_delete_user(user_id: int, db: Session = Depends(get_db), admin: models.User = Depends(require_admin)):
+    """Delete user (and associated data)"""
+    user = db.query(models.User).get(user_id)
+    if not user:
+        raise HTTPException(status_code=404, detail='User not found')
+    db.delete(user)
+    db.commit()
+    return {'message': 'User deleted'}
+
+@app.get('/admin/scholarships')
+def admin_list_scholarships(db: Session = Depends(get_db), admin: models.User = Depends(require_admin)):
+    """Admin view all scholarships with creator info"""
+    scholarships = db.query(models.Scholarship).all()
+    return scholarships
+
+@app.get('/admin/scholarships/by-provider/{provider}')
+def admin_filter_by_provider(provider: str, db: Session = Depends(get_db), admin: models.User = Depends(require_admin)):
+    """Filter scholarships by provider"""
+    scholarships = db.query(models.Scholarship).filter(models.Scholarship.provider.ilike(f'%{provider}%')).all()
+    return scholarships
+
+@app.post('/admin/scholarships/{scholarship_id}/approve')
+def admin_approve_scholarship(scholarship_id: int, db: Session = Depends(get_db), admin: models.User = Depends(require_admin)):
+    """Approve/feature a scholarship"""
+    s = db.query(models.Scholarship).get(scholarship_id)
+    if not s:
+        raise HTTPException(status_code=404, detail='Scholarship not found')
+    # You could add an 'approved' or 'featured' column to track this
+    return {'message': f'Scholarship {scholarship_id} approved'}
+
+@app.delete('/admin/scholarships/{scholarship_id}')
+def admin_delete_scholarship(scholarship_id: int, db: Session = Depends(get_db), admin: models.User = Depends(require_admin)):
+    """Admin delete scholarship"""
+    s = db.query(models.Scholarship).get(scholarship_id)
+    if not s:
+        raise HTTPException(status_code=404, detail='Scholarship not found')
+    db.delete(s)
+    db.commit()
+    return {'message': 'Scholarship deleted'}
+
+@app.get('/admin/activity-log')
+def admin_activity_log(limit: int = 100, db: Session = Depends(get_db), admin: models.User = Depends(require_admin)):
+    """Recent user activity (logins, creations)"""
+    # Fetch recent users by last_login
+    recent = db.query(models.User).filter(models.User.last_login.isnot(None)).order_by(models.User.last_login.desc()).limit(limit).all()
+    return [{'email': u.email, 'name': u.name, 'last_login': u.last_login, 'role': u.role} for u in recent]
+

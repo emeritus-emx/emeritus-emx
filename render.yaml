@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: emeritus-emx-backend
+    runtime: python
+    runtimeVersion: 3.11.7
+    buildCommand: cd frontend-backend-local/backend && pip install -r requirements.txt
+    startCommand: cd frontend-backend-local/backend && uvicorn main:app --host 0.0.0.0 --port 8000
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: emeritus-emx-db
+          property: connectionString
+      - key: ENVIRONMENT
+        value: production
+      - key: CORS_ORIGINS
+        value: "*"
+    disk:
+      name: backend-data
+      mountPath: /var/data
+      sizeGB: 1
+
+databases:
+  - name: emeritus-emx-db
+    databaseName: emeritus_emx_db
+    user: emeritus_user
+    region: ohio

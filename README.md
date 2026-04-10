@@ -32,14 +32,6 @@ I'm a **full-stack and blockchain developer** passionate about building innovati
 
 </div>
 
----
-
-## 📞 Contact & Social
-
-📱 **Phone**: 09032259429  
-🔗 **LinkedIn**: [Your LinkedIn](#)  
-🐦 **Twitter**: [Your Twitter](#)  
-📧 **Email**: [Your Email](#)
 
 ---
 

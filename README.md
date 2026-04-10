@@ -1,7 +1,6 @@
 - 👋 Hi, I’m @emeritus-emx
-- 👀 I’m interested in ... full stack 
-- 🌱 I’m currently learning ... python and Blockchain development 
-- 💞️ I’m looking to collaborate on ... creating an online banking app
+- 👀 full stack and blockchain developer
+- 🌱React, python, solidity,
 - 📫 How to reach me ...09032259429
 - 😄 Pronouns: ... Emediong obot 
 - ⚡ Fun fact: ...cool

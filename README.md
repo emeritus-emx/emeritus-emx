@@ -11,13 +11,7 @@ I'm a **full-stack and blockchain developer** passionate about building innovati
 ---
 
 
-### GitHub Statistics
-| Metric                       | Value           |
-|------------------------------|------------------|
-| **Stars**                    | ![Stars](https://img.shields.io/github/stars/emeritus-emx/emeritus-emx)
-| **Forks**                    | ![Forks](https://img.shields.io/github/forks/emeritus-emx/emeritus-emx)
-| **Open Issues**              | ![Issues](https://img.shields.io/github/issues/emeritus-emx/emeritus-emx)
-| **Last Commit**              | ![Last Commit](https://img.shields.io/github/last-commit/emeritus-emx/emeritus-emx)
+
 
 ### Programming Languages
 | Language          | Percentage |

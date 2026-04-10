@@ -1,24 +1,54 @@
-# Profile Header
+# 🚀 Welcome to My GitHub Profile
 
-![Profile Image](link_to_your_image)
+![Profile Header](https://img.shields.io/badge/Full%20Stack%20Developer-Blockchain%20Enthusiast-brightgreen?style=for-the-badge)
 
-## About Me
+---
 
-Hello! I am a software developer with a passion for building innovative solutions. I enjoy working on both front-end and back-end technologies and continuously learning new tools and languages.
+## 👋 About Me
 
-## Tech Stack
+I'm a **full-stack and blockchain developer** passionate about building innovative solutions with React, Python, and Solidity. Always learning, always creating.
 
-- **Languages**: JavaScript, Python, Java
-- **Frameworks**: React, Node.js, Django
-- **Databases**: PostgreSQL, MongoDB
-- **Tools**: Git, Docker, Jenkins
+---
 
-## GitHub Statistics
+## 🛠️ Tech Stack
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=emeritus-emx&show_icons=true&theme=radical)
+| **Languages** | **Frameworks** | **Blockchain** | **Tools** |
+|:---:|:---:|:---:|:---:|
+| JavaScript | React | Solidity | Git |
+| Python | Node.js | Web3.js | Docker |
+| Java | Django | Hardhat | Jenkins |
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=emeritus-emx&layout=compact&theme=radical)
+---
 
-## Contact
+## 📊 GitHub Statistics
 
-Feel free to reach out to me on [Twitter](https://twitter.com/your_twitter) or [LinkedIn](https://linkedin.com/in/your_linkedin).
+<div align="center">
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=emeritus-emx&show_icons=true&theme=radical&hide_border=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=emeritus-emx&layout=compact&theme=radical&hide_border=true)
+
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=emeritus-emx&theme=radical&hide_border=true)
+
+</div>
+
+---
+
+## 📞 Contact & Social
+
+📱 **Phone**: 09032259429  
+🔗 **LinkedIn**: [Your LinkedIn](#)  
+🐦 **Twitter**: [Your Twitter](#)  
+📧 **Email**: [Your Email](#)
+
+---
+
+⚡ **Fun Fact**: I love building cool blockchain projects and exploring new technologies!
+
+---
+
+<div align="center">
+  
+### Made with ❤️ by @emeritus-emx
+
+</div>

@@ -5,26 +5,18 @@ I'm a **full-stack developer** building scalable apps with React Native, Python 
 
 ---
 
-## 📊 My GitHub Statistics
 
-![Stats](https://github-readme-stats.vercel.app/api?username=emeritus-emx&show_icons=true&theme=tokyonight&border_radius=10)
 
-![Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=emeritus-emx&layout=compact&theme=tokyonight&border_radius=10)
-
----
-
-## 🔥 Streak Stats
-![GitHub Streak](https://streak-stats.demolab.com?user=emeritus-emx&theme=tokyonight&hide_border=true)
+## 📊 GitHub Dashboard
+![Metrics](https://metrics.lecoq.io/emeritus-emx?template=classic&base.header=0&base.activity=1&base.community=1&base.repositories=1&base.metadata=0&languages=1&languages.limit=6&languages.threshold=0%25&languages.colors=github&languages.sort=size&languages.display=bar&config.timezone=Africa%2FLagos)
 
 ---
 
-## 🚀 Tech Stack
-![Python](https://img.shields.io/badge/-Python-black?style=for-the-badge&logo=python)
-![React](https://img.shields.io/badge/-React-black?style=for-the-badge&logo=react)
-![React Native](https://img.shields.io/badge/-ReactNative-black?style=for-the-badge&logo=react)
-![FastAPI](https://img.shields.io/badge/-FastAPI-black?style=for-the-badge&logo=fastapi)
+## 📦 Stats Overview
+![](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=emeritus-emx&theme=github_dark)
+![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=emeritus-emx&theme=github_dark)
 
 ---
 
-## 🎯 Rating
-![Rating](https://img.shields.io/badge/Rating-A++-brightgreen?style=for-the-badge)
+## 🔥 Streak
+![](https://streak-stats.demolab.com?user=emeritus-emx&theme=tokyonight)

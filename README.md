@@ -5,14 +5,6 @@
 
 ---
 
-## 🧠 About Me
-- 💻 Tech: React, React Native, Python, FastAPI  
-- 🔌 Real-time systems (Sockets, APIs)  
-- 🎯 Goal: Build impactful products & land top opportunities  
-
-
----
-
 ## ⚡ Tech Stack
 
 ![React](https://img.shields.io/badge/-React-black?style=for-the-badge&logo=react)

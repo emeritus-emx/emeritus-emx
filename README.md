@@ -5,23 +5,11 @@ I'm a **full-stack developer** building scalable apps with React Native, Python 
 
 ---
 
-<table>
-<tr>
-<td>
+## 📊 My GitHub Statistics
 
-### 📊 My GitHub Statistics
-<img src="https://github-readme-stats.vercel.app/api?username=emeritus-emx&show_icons=true&theme=tokyonight&hide_border=true&border_radius=10" />
+![Stats](https://github-readme-stats.vercel.app/api?username=emeritus-emx&show_icons=true&theme=tokyonight&border_radius=10)
 
-</td>
-
-<td>
-
-### 💻 My Programming Languages
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=emeritus-emx&layout=compact&theme=tokyonight&hide_border=true&border_radius=10" />
-
-</td>
-</tr>
-</table>
+![Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=emeritus-emx&layout=compact&theme=tokyonight&border_radius=10)
 
 ---
 

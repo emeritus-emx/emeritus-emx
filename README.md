@@ -1,7 +1,6 @@
 # 👋 Hi, I'm Emediong (Emeritus)
 
 🚀 Full-Stack & Mobile Developer  
-📱 Building **SayLess** – a real-time chat application  
 ⚡ Passionate about clean UI, real-time systems & scalable apps  
 
 ---
@@ -10,7 +9,7 @@
 - 💻 Tech: React, React Native, Python, FastAPI  
 - 🔌 Real-time systems (Sockets, APIs)  
 - 🎯 Goal: Build impactful products & land top opportunities  
-- 🚀 Currently building: **SayLess Chat App**
+
 
 ---
 
